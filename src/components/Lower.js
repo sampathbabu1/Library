@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography,Divider } from "@mui/material";
 import { useState } from "react";
 import { Stack } from "@mui/material";
 import BookCard from "./BookCard";
@@ -9,8 +9,12 @@ function Lower(props) {
 
   console.log(first);
   return (
-    <Box sx={{display:props.active}}>
-      <Stack direction="row">
+    <Box sx={{display:props.active,m:2}}>
+    <Typography variant="h6">
+      My Library
+    </Typography>
+      <Stack direction="row" spacing={3}>
+        <Stack direction="column">
         <Button
           variant="text"
           color={first}
@@ -22,6 +26,9 @@ function Lower(props) {
         >
           Currently Reading
         </Button>
+        <Divider sx={{backgroundColor:'primary.main',display:(first=='primary')?"":'none'}}></Divider>
+        </Stack>
+        <Stack direction="column">
         <Button
           variant="text"
           color={second}
@@ -32,6 +39,8 @@ function Lower(props) {
         >
           Finished
         </Button>
+        <Divider sx={{backgroundColor:'primary.main',display:(first=='secondary')?"":'none'}}></Divider>
+        </Stack>
       </Stack>
       {first == "primary" ? (
           <Stack direction="row">

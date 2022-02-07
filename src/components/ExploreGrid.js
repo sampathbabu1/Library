@@ -7,10 +7,12 @@ import {
   SignalCellularAltOutlined,
 } from "@mui/icons-material";
 import { Grid, Box, Typography, SvgIcon } from "@mui/material";
-export default function ExploreGrid() {
+
+function ExploreGrid(props) {
   const temp = () => console.log("hi");
   return (
-    <Typography variant="body1">
+    <Box m={2}>
+    <Typography variant="body1" {...props}>
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <Box onClick={temp}>
@@ -130,5 +132,7 @@ export default function ExploreGrid() {
         </Grid>
       </Grid>
     </Typography>
+    </Box>
   );
 }
+export default ExploreGrid;

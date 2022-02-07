@@ -5,8 +5,9 @@ import reportWebVitals from "./reportWebVitals";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import Tex from "./Tex";
-import CeraPro from "./cera-pro/CeraPro.ttf";
+// import CeraPro from "./cera-pro/CeraPro.ttf";
 import CeraProBold from "./cera-pro/CeraProBold.ttf";
+import Home from "./components/Home";
 export const theme = createTheme({
   palette: {
     primary: { main: "#2ce080" },
@@ -21,7 +22,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "CeraPro",
+    fontFamily: "Cera Pro",
     button: {
       textTransform: "none",
     },

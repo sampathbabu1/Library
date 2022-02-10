@@ -7,8 +7,6 @@ import {
 import { ReactComponent as Logo } from "../Assets/logo.svg";
 import ExploreGrid from "./ExploreGrid";
 import React, { useContext, useState } from "react";
-import Lower from "./Lower";
-import Home from "./Home";
 import { Link } from "react-router-dom";
 import { SearchContext,FilterContext } from "./Home";
 export default function Nav(props) {

@@ -1,11 +1,9 @@
-import { Container, Grid, Paper, Box } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import db from "../data.json";
 import BookCard from "./BookCard";
 import SearchBar from "./SearchBar";
-import React, { useContext, useState } from "react";
-import Footer from "./Footer";
+import React, {  useState } from "react";
 import Nav from "./AppBar";
-import { Link } from "react-router-dom";
 let SearchContext;
 let FilterContext;
 export default function Home(props) {

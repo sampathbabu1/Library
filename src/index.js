@@ -4,15 +4,11 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
-import Nav from "./components/AppBar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import BookDetail from "./components/BookDetail";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CurrentlyReading from "./components/CurrentlyReading";
-import FinishedBooks from "./components/FinishedBooks";
 import Lower from "./components/Lower";
-import Test from "./components/test";
 export const theme = createTheme({
   palette: {
     primary: { main: "#2ce080" },

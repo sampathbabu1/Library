@@ -1,7 +1,5 @@
-import { Button, Typography, Divider } from "@mui/material";
+import {  Typography } from "@mui/material";
 import { useState } from "react";
-import { Stack } from "@mui/material";
-import BookCard from "./BookCard";
 import { Box,Tabs,Tab } from "@mui/material";
 import CurrentlyReading from "./CurrentlyReading";
 import FinishedBooks from "./FinishedBooks";

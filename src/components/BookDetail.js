@@ -2,10 +2,9 @@ import { AccessTime, ArrowForward } from "@mui/icons-material";
 import { Box, Typography, Button, Tabs, Tab, Grid } from "@mui/material";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import Nav from "./AppBar";
+import Nav from "./Nav";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -22,6 +21,7 @@ function TabPanel(props) {
     </div>
   );
 }
+
 function getData(index) {
   let db = require("../data.json");
   console.log(typeof index);
@@ -170,7 +170,7 @@ export default function BookDetail(props) {
               justifyContent={"center"}
               height={1}
             >
-              <Box component={"img"} src={require("./2.png")} width={300}></Box>
+              <Box component={"img"} src={require(`../Assets/BookCovers/${parseInt(index)+1}.png`)} width={300}></Box>
             </Box>
           </Grid>
         </Grid>

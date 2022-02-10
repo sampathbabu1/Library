@@ -2,8 +2,8 @@ import { Container, Grid } from "@mui/material";
 import db from "../data.json";
 import BookCard from "./BookCard";
 import SearchBar from "./SearchBar";
-import React, {  useState } from "react";
-import Nav from "./AppBar";
+import React, { useState } from "react";
+import Nav from "./Nav";
 let SearchContext;
 let FilterContext;
 export default function Home(props) {
@@ -14,11 +14,6 @@ export default function Home(props) {
   console.log(db);
   let searchDisplay = useState(false);
   SearchContext = React.createContext(searchDisplay);
-  // const handle=()=>{
-  //   setSearchOnClick((prev)=>!prev)
-  // }
-
-  // let searchdisplay = useContext(SearchContext);
   const handlefilter = (value) => {
     setSearch(value.target.value);
   };
@@ -27,14 +22,14 @@ export default function Home(props) {
       <FilterContext.Provider value={filterType}>
         <Nav />
         <Container sx={{ display: searchDisplay[0] ? "flex" : "none" }}>
-          <SearchBar width={0.75} handleinput={handlefilter}></SearchBar>
+          <SearchBar value={search} handleinput={handlefilter}></SearchBar>
         </Container>
         <Container>
           <Grid container spacing={2}>
             {db["books"].map((value, index) =>
               (value[index + 1].title.includes(search) ||
                 value[index + 1].author.includes(search)) &&
-              value[index + 1].type.includes(filterType[0]) ? (
+              (value[index + 1].type.includes(filterType[0])) ? (
                 <Grid item xs={4}>
                   <BookCard
                     index={index}

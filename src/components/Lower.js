@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box,Tabs,Tab } from "@mui/material";
 import CurrentlyReading from "./CurrentlyReading";
 import FinishedBooks from "./FinishedBooks";
-import Nav from "./AppBar";
+import Nav from "./Nav";
 function Lower(props) {
   let [value,setValue]=useState(0);
   const handleChange=(event,newValue)=>{

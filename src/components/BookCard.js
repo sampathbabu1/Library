@@ -32,7 +32,7 @@ function BookCard(props) {
       <Link to={`/${props.index}`}>
         <Box
           component="img"
-          src={require("./2.png")}
+          src={require(`../Assets/BookCovers/${parseInt(props.index)+1}.png`)}
           height="250px"
           width={270}
         ></Box>

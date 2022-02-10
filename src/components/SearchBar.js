@@ -5,7 +5,7 @@ export default function SearchBar(props){
     return (
         <Box {...props}>
         <FormControl variant="standard">
-            <Input  fullWidth={true} startAdornment={
+            <Input value={props.value} autoFocus={true} fullWidth={true} startAdornment={
                 <InputAdornment position="start">
                     <Search></Search>
                 </InputAdornment>

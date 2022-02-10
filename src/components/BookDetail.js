@@ -44,7 +44,6 @@ export default function BookDetail(props) {
       localStorage.setItem(category, JSON.stringify([index]));
     } else {
       let a = JSON.parse(localStorage.getItem(category));
-      let t = [1, 2, 3];
 
       if (!a.includes(index)) {
         a.push(index);
@@ -57,8 +56,9 @@ export default function BookDetail(props) {
       localStorage.setItem("title", JSON.stringify(a));
     } else {
       let a = JSON.parse(localStorage.getItem("finished"));
-      if(a.indexOf(index)!=-1)
-      a.splice(a.indexOf(index), 1);
+      if (a.indexOf(index) != -1) {
+        a.splice(a.indexOf(index), 1);
+      }
       localStorage.setItem("finished", JSON.stringify(a));
     }
   };

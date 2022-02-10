@@ -17,9 +17,6 @@ function Explore() {
         </Typography>
         <KeyboardArrowDown></KeyboardArrowDown>
       </IconButton>
-      <Dialog open={!display} maxWidth="lg">
-        <ExploreGrid display={display ? "none" : ""} />
-      </Dialog>
       {/* <Slide direction="up" in={true} mountOnEnter unmountOnExit>
         {React.forwardRef((props, ref) => (
           <ExploreGrid ref={ref} {...props} />

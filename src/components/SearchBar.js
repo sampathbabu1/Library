@@ -1,21 +1,16 @@
 import { Search } from "@mui/icons-material";
-import {FormControl,Input, InputAdornment} from "@mui/material";
-import { useState } from "react";
+import {Box, FormControl,Input, InputAdornment, TextField} from "@mui/material";
 export default function SearchBar(props){
-    let [inputvalue,SetInputValue]=useState("");
-    const handleinput=(value)=>{
-       
-        SetInputValue(value.target.value);
-        
-    }
-    console.log(inputvalue);
+  
     return (
+        <Box {...props}>
         <FormControl variant="standard">
-            <Input startAdornment={
+            <Input  fullWidth={true} startAdornment={
                 <InputAdornment position="start">
                     <Search></Search>
                 </InputAdornment>
-            } placeholder="Search by title or author" onChange={handleinput}/>
+            } placeholder="Search by title or author" onChange={props.handleinput}/>
         </FormControl>
+        </Box>
     );
 }

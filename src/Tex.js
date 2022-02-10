@@ -28,8 +28,8 @@ function Tex() {
           <UserAvatar></UserAvatar>
         </Toolbar>
       </AppBar>
-      {/* <Home /> */}
-      <Lower active=""></Lower>
+      <Home />
+      {/* <Lower active=""></Lower> */}
     {/* <DividerPrimary></DividerPrimary> */}
       {/* <Switch checked={toggle} onClick={handle}></Switch>
       {toggle ? <div>hello</div> : <div>null</div>} */}

@@ -1,9 +1,9 @@
 import {  Typography } from "@mui/material";
 import { useState } from "react";
 import { Box,Tabs,Tab } from "@mui/material";
-import CurrentlyReading from "./CurrentlyReading";
-import FinishedBooks from "./FinishedBooks";
-import Nav from "./Nav";
+import CurrentlyReading from "../CurrentlyReading/CurrentlyReading";
+import FinishedBooks from "../FinishedReading/FinishedBooks";
+import Nav from "../Nav/Nav";
 function Lower(props) {
   let [value,setValue]=useState(0);
   const handleChange=(event,newValue)=>{
@@ -36,15 +36,15 @@ function Lower(props) {
   }
   return (
     <Box>
-      <Nav />
+      {/* <Nav /> */}
     <Box marginLeft={3}>
       <Tabs
         value={value}
         onChange={handleChange}
         aria-label="basic tabs example"
       >
-        <Tab label="Currently Reading" {...a11yProps(0)} />
-        <Tab label="Finished" {...a11yProps(1)} />
+        <Tab label="Currently Reading" {...a11yProps(0)} sx={{fontWeight:"bold",fontSize:16}}/>
+        <Tab label="Finished" {...a11yProps(1)} sx={{fontWeight:"bold",fontSize:16}}/>
       </Tabs>
     </Box>
     <TabPanel value={value} index={0}>

@@ -2,7 +2,7 @@ import { AccessTime, ArrowForward } from "@mui/icons-material";
 import { Box, Typography, Button, Tabs, Tab, Grid } from "@mui/material";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import Nav from "./Nav";
+import Nav from "../Nav/Nav";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -23,7 +23,7 @@ function TabPanel(props) {
 }
 
 function getData(index) {
-  let db = require("../data.json");
+  let db = require("../../data.json");
   console.log(typeof index);
   console.log(db.books[index][parseInt(index) + 1]);
   const author = db.books[index][parseInt(index) + 1].author;
@@ -37,7 +37,7 @@ export default function BookDetail(props) {
   const handle = (event, newValue) => {
     setValue(newValue);
   };
-  const index = useParams().id;
+  const index = useParams().id??0;
   console.log(index);
   const setReadorFinish = (index, category) => {
     if (!localStorage.getItem(category)) {
@@ -71,7 +71,7 @@ export default function BookDetail(props) {
   }
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Box m={4}>
         <Grid container spacing={2}>
           <Grid item xs={8}>
@@ -80,7 +80,6 @@ export default function BookDetail(props) {
                 Get the key ideas from
               </Typography>
               <Typography variant="h5" fontWeight={"bold"}>
-                {/* Beyond Entrepreneurship 2.0 */}
                 {title}
               </Typography>
               <Typography variant="body1" sx={{ marginY: 2 }}>
@@ -170,7 +169,7 @@ export default function BookDetail(props) {
               justifyContent={"center"}
               height={1}
             >
-              <Box component={"img"} src={require(`../Assets/BookCovers/${parseInt(index)+1}.png`)} width={300}></Box>
+              <Box component={"img"} src={require(`../../Assets/BookCovers/${parseInt(index)+1}.png`)} width={300}></Box>
             </Box>
           </Grid>
         </Grid>

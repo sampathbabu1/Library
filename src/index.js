@@ -4,11 +4,12 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import BookDetail from "./components/BookDetail";
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
+import BookDetail from "./components/BookDetail/BookDetail";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Lower from "./components/Lower";
+import Lower from "./components/Lower/Lower";
+import { Container } from "@mui/material";
 export const theme = createTheme({
   palette: {
     primary: { main: "#2ce080" },
@@ -72,6 +73,7 @@ export const theme = createTheme({
 //   document.getElementById("root")
 // );
 ReactDOM.render(
+  <Container>
   <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Routes>
@@ -97,7 +99,8 @@ ReactDOM.render(
         <Route path="/mylibrary" element={<><Lower ></Lower><Footer /></>} ></Route>
       </Routes>
     </BrowserRouter>
-  </ThemeProvider>,
+  </ThemeProvider>
+  </Container>,
   document.getElementById("root")
 );
 reportWebVitals();

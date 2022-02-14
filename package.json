@@ -65,14 +65,6 @@
     "@storybook/react": "^6.4.17",
     "jest-sonar-reporter": "^2.0.0",
     "webpack": "^5.68.0"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverage": true,
-    "testResultsProcessor": "jest-sonar-reporter",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
-    ]
   }
+  
 }

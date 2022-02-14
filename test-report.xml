@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/sampab/test/src/components/BookCard/BookCard.test.js">
+    <testCase name="BookCard test" duration="228"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Nav/Nav.test.js">
+    <testCase name="NavBar Explore Button Test" duration="524"/>
+    <testCase name="NavBar Search test" duration="521"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Lower/Lower.test.js">
+    <testCase name="NavBar Explore Button Test" duration="541"/>
+    <testCase name="NavBar Search test" duration="556"/>
+    <testCase name="My Library Test" duration="192"/>
+  </file>
+  <file path="/home/sampab/test/src/components/FinishedReading/FinishedReading.test.js">
+    <testCase name="NavBar Explore Button Test" duration="501"/>
+    <testCase name="NavBar Search test" duration="582"/>
+    <testCase name="currently reading test" duration="456"/>
+  </file>
+  <file path="/home/sampab/test/src/components/CurrentlyReading/CurrentReading.test.js">
+    <testCase name="NavBar Explore Button Test" duration="564"/>
+    <testCase name="NavBar Search test" duration="577"/>
+    <testCase name="currently reading test" duration="423"/>
+  </file>
+  <file path="/home/sampab/test/src/components/ExploreGrid/ExploreGrid.test.js">
+    <testCase name="ExploreGrid Test" duration="507">
+      <failure message="TypeError: Assignment to constant variable."><![CDATA[TypeError: Assignment to constant variable.
+    at Object.<anonymous> (/home/sampab/test/src/components/ExploreGrid/ExploreGrid.test.js:16:10)
+    at Promise.then.completed (/home/sampab/test/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/sampab/test/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/sampab/test/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/home/sampab/test/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/sampab/test/node_modules/jest-circus/build/run.js:66:9)
+    at run (/home/sampab/test/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/sampab/test/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/sampab/test/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/sampab/test/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/sampab/test/node_modules/jest-runner/build/runTest.js:475:34)
+    at Object.worker (/home/sampab/test/node_modules/jest-runner/build/testWorker.js:133:12)]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/sampab/test/src/components/Home/Home.test.js">
+    <testCase name="NavBar Explore Button Test" duration="600"/>
+    <testCase name="NavBar Search test" duration="565"/>
+    <testCase name="Home Page test" duration="1058"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Footer/Footer.test.js">
+    <testCase name="Footer test" duration="79"/>
+  </file>
+  <file path="/home/sampab/test/src/components/SearchBar/SearchBar.test.js">
+    <testCase name="SearchBar test:" duration="93"/>
+  </file>
+  <file path="/home/sampab/test/src/components/BookDetail/BookDetail.test.js">
+    <testCase name="NavBar Explore Button Test" duration="273"/>
+    <testCase name="NavBar Search test" duration="327"/>
+    <testCase name="BookDetail test" duration="185"/>
+  </file>
+</testExecutions>

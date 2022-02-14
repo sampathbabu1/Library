@@ -1,5 +1,5 @@
 import ExploreGrid from "./ExploreGrid";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 test("ExploreGrid Test", () => {
   render(
@@ -11,5 +11,9 @@ test("ExploreGrid Test", () => {
     />
   );
   const Element = screen.getByText("Entrepreneurship");
+  fireEvent.click(Element,{button:0});
+  fireEvent.click(Element,{button:0});
+  Element=screen.getByText("Personal Development");
+  fireEvent.click(Element,{button:0});
   expect(Element).toBeVisible();
 });

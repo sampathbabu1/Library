@@ -1,9 +1,10 @@
 import { useTheme } from "@emotion/react";
 import { Grid, Typography,Box } from "@mui/material";
 import { ReactComponent as Logo } from "../../Assets/logo.svg";
-import {theme} from "../../index";
+// import {theme} from "../../index";
+const theme=()=>{}
 export default function Footer(props) {
-    let grey=theme.palette.grey.main ?? "#6D787E";
+    let grey= "#6D787E";
   return (
     <Box bgcolor={'#F1F6F4'} padding={5} position='relative' bottom={0} width={0.95}>
       <Grid container spacing={2} >

@@ -1,0 +1,85 @@
+{
+  "books": [
+    {
+      "1": {
+        "title": "Bring your Human to work",
+        "author": "Erica Keswin",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "1.png"
+      }
+    },
+    {
+      "2": {
+        "title": "Employee to Entrepreneur",
+        "author": "Steve Glaveski",
+        "type":"Entrepreneurship",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "2.png"
+      }
+    },
+    {
+      "3": {
+        "title": "Doesn’t Hurt to Ask",
+        "author": "Trey Gowdy",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "3.png"
+      }
+    },
+    {
+      "4": {
+        "title": "The Fate of Food",
+        "author": "Amanda Little",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "4.png"
+      }
+    },
+    {
+      "5": {
+        "title": "Lives of the Stoics",
+        "author": "Loving Your Business",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "5.png"
+      }
+    },
+    {
+      "6": {
+        "title": "Loving Your Business",
+        "author": "Debbie King",
+        "type":"Entrepreneurship",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "6.png"
+      }
+    },
+    {
+      "7": {
+        "title": "The Lonely Century",
+        "author": "Noreena Hertz",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "7.png"
+      }
+    },
+    {
+      "8": {
+        "title": "Eat Better, Feel Better",
+        "author": "Giada De Laurentiis",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "8.png"
+      }
+    },
+    {
+      "9": {
+        "title": "Dropshipping",
+        "author": "James Moore",
+        "type":"none",
+        "content":"Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world.",
+        "url": "9.png"
+      }
+    }
+  ]
+}

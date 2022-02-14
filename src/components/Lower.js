@@ -1,54 +1,58 @@
-import { Button } from "@mui/material";
+import {  Typography } from "@mui/material";
 import { useState } from "react";
-import { Stack } from "@mui/material";
-import BookCard from "./BookCard";
-import { Box } from "@mui/system";
+import { Box,Tabs,Tab } from "@mui/material";
+import CurrentlyReading from "./CurrentlyReading";
+import FinishedBooks from "./FinishedBooks";
+import Nav from "./Nav";
 function Lower(props) {
-  let [first, setFirst] = useState("primary");
-  let [second, setSecond] = useState("secondary");
+  let [value,setValue]=useState(0);
+  const handleChange=(event,newValue)=>{
+    setValue(newValue);
+  }
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
 
-  console.log(first);
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      "aria-controls": `simple-tabpanel-${index}`,
+    };
+  }
   return (
-    <Box sx={{display:props.active}}>
-      <Stack direction="row">
-        <Button
-          variant="text"
-          color={first}
-          onClick={() => {
-            console.log(first);
-            setFirst("primary");
-            setSecond("secondary");
-          }}
-        >
-          Currently Reading
-        </Button>
-        <Button
-          variant="text"
-          color={second}
-          onClick={() => {
-            setFirst("secondary");
-            setSecond("primary");
-          }}
-        >
-          Finished
-        </Button>
-      </Stack>
-      {first == "primary" ? (
-          <Stack direction="row">
-        <BookCard
-          title="Beyond Entrepreneurship"
-          author="Jim Collins & Bill Lazier"
-          duration="13-minute read"
-        ></BookCard>
-        <BookCard
-          title="Beyond Entrepreneurship"
-          author="Jim Collins & Bill Lazier"
-          duration="13-minute read"
-        ></BookCard>
-        </Stack>
-      ) : (
-        <div>Finished</div>
-      )}
+    <Box>
+      <Nav />
+    <Box marginLeft={3}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="basic tabs example"
+      >
+        <Tab label="Currently Reading" {...a11yProps(0)} />
+        <Tab label="Finished" {...a11yProps(1)} />
+      </Tabs>
+    </Box>
+    <TabPanel value={value} index={0}>
+        <CurrentlyReading />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <FinishedBooks />
+      </TabPanel>
     </Box>
   );
 }

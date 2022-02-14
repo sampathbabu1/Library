@@ -4,31 +4,32 @@ import {
   Search,
   KeyboardArrowUp,
 } from "@mui/icons-material";
-import { ReactComponent as Logo } from "../Assets/logo.svg";
-import ExploreGrid from "./ExploreGrid";
+import { ReactComponent as Logo } from "../../Assets/logo.svg";
+import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { SearchContext,FilterContext } from "./Home";
+import { SearchContext,FilterContext } from "../Home/Home";
+// import { SearchContext,FilterContext } from "./Nav.test";
 export default function Nav(props) {
   let [boolvalue, setBoolvalue] = useState(false);
   let [searchDisplay,setSearchDisplay]=useContext(SearchContext);
   let [filter,setFilter]=useContext(FilterContext);
   let [name, setName] = useState("home");
   let [displaybool, setDisplay] = useState(false);
-  const handleDisplay = () => {
-    setDisplay((prev) => !prev);
-  };
+  // const handleDisplay = () => {
+  //   setDisplay((prev) => !prev);
+  // };
 
   const handle = () => {
     setBoolvalue((prev) => !prev);
   };
-  const handlefilter=(value)=>{
-    setFilter(value);
-    console.log(filter);
-  }
-  const handlelibrary = () => {
-    setName("library");
-  };
+  // const handlefilter=(value)=>{
+  //   setFilter(value);
+  //   console.log(filter);
+  // }
+  // const handlelibrary = () => {
+  //   setName("library");
+  // };
 
   return (
     <Box m={2}>
@@ -69,7 +70,7 @@ export default function Nav(props) {
           </Button>
           </Link>
         </Box>
-        <Avatar sx={{ position: "absolute", right: 0, marginRight: 2 }}>
+        <Avatar sx={{ position: "relative", right: 0, marginRight: 3 }}>
           R
         </Avatar>
       </Box>

@@ -1,16 +1,15 @@
 import { Typography, Box, Grid } from "@mui/material";
-import BookCard from "./BookCard";
-import db from "../data.json";
+import BookCard from "../BookCard/BookCard";
+import db from "../../data.json";
 import { useEffect, useState } from "react";
 export default function CurrentlyReading(props) {
-  // let data = [];
   let [data,setData]=useState([]);
   useEffect(()=>{
     if(localStorage.getItem('title')) setData(JSON.parse(localStorage.getItem('title')))
   },[]);
   if (
-    !localStorage.getItem("title") &&
-    JSON.parse(localStorage.getItem("title")).length > 0
+    !localStorage.getItem("title")||
+    JSON.parse(localStorage.getItem("title")).length === 0
   ) {
     return (
       <Box height={1}>
@@ -18,8 +17,6 @@ export default function CurrentlyReading(props) {
       </Box>
     );
   } else {
-    // data = JSON.parse(localStorage.getItem("title"));
-    
     return (
       <Box m={0}>
         <Grid container spacing={2}>
@@ -33,6 +30,7 @@ export default function CurrentlyReading(props) {
                 author={db["books"][value][value + 1].author}
                 title={db["books"][value][value + 1].title}
                 duration="13-minute read"
+                url={db['books'][value][value+1].url}
               ></BookCard>
             </Grid>
           ))}

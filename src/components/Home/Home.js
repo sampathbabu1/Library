@@ -1,17 +1,17 @@
 import { Container, Grid } from "@mui/material";
-import db from "../data.json";
-import BookCard from "./BookCard";
-import SearchBar from "./SearchBar";
+import db from "../../data.json";
+import BookCard from "../BookCard/BookCard";
+import SearchBar from "../SearchBar/SearchBar";
 import React, { useState } from "react";
-import Nav from "./Nav";
+import Nav from "../Nav/Nav";
+import {Typography} from "@mui/material";
 let SearchContext;
 let FilterContext;
 export default function Home(props) {
   let [search, setSearch] = useState("");
   let filterType = useState("");
   FilterContext = React.createContext(filterType);
-  // let [searchOnClick,setSearchOnClick]=useState(false);
-  console.log(db);
+  // console.log(db);
   let searchDisplay = useState(false);
   SearchContext = React.createContext(searchDisplay);
   const handlefilter = (value) => {
@@ -25,20 +25,26 @@ export default function Home(props) {
           <SearchBar value={search} handleinput={handlefilter}></SearchBar>
         </Container>
         <Container>
+          <Typography fontWeight={'bold'} fontSize={20}>
+          {
+            (filterType[0].length>0)?filterType[0]:"Trending"
+          }
+          </Typography>
           <Grid container spacing={2}>
             {db["books"].map((value, index) =>
               (value[index + 1].title.includes(search) ||
                 value[index + 1].author.includes(search)) &&
               (value[index + 1].type.includes(filterType[0])) ? (
-                <Grid item xs={4}>
+                <Grid item xs={4} key={value[index + 1].title}>
                   <BookCard
                     index={index}
+                    alt={`${index}`}
                     category="title"
-                    key={value[index + 1].title}
                     title={value[index + 1].title}
                     author={value[index + 1].author}
                     duration="13-minute read"
                     buttontitle="Read book"
+                    url={value[index+1].url}
                   ></BookCard>
                 </Grid>
               ) : (

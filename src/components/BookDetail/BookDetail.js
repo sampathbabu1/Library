@@ -37,7 +37,7 @@ export default function BookDetail(props) {
   const handle = (event, newValue) => {
     setValue(newValue);
   };
-  const index = useParams().id??0;
+  const index = useParams().id ?? props.id ?? 0;
   console.log(index);
   const setReadorFinish = (index, category) => {
     if (!localStorage.getItem(category)) {
@@ -50,11 +50,11 @@ export default function BookDetail(props) {
         localStorage.setItem(category, JSON.stringify(a));
       }
     }
-    if (category === "finished") {
+    if (category === "finished" && localStorage.getItem("title")) {
       let a = JSON.parse(localStorage.getItem("title"));
       a.splice(a.indexOf(index), 1);
       localStorage.setItem("title", JSON.stringify(a));
-    } else {
+    } else if (localStorage.getItem("finished")) {
       let a = JSON.parse(localStorage.getItem("finished"));
       if (a.indexOf(index) != -1) {
         a.splice(a.indexOf(index), 1);
@@ -169,7 +169,13 @@ export default function BookDetail(props) {
               justifyContent={"center"}
               height={1}
             >
-              <Box component={"img"} src={require(`../../Assets/BookCovers/${parseInt(index)+1}.png`)} width={300}></Box>
+              <Box
+                component={"img"}
+                src={require(`../../Assets/BookCovers/${
+                  parseInt(index) + 1
+                }.png`)}
+                width={300}
+              ></Box>
             </Box>
           </Grid>
         </Grid>

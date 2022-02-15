@@ -44,6 +44,7 @@ export default function Home(props) {
                     author={value[index + 1].author}
                     duration="13-minute read"
                     buttontitle="Read book"
+                    type="Home"
                     url={value[index+1].url}
                   ></BookCard>
                 </Grid>

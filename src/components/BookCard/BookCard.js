@@ -28,7 +28,8 @@ function BookCard(props) {
       a.splice(a.indexOf(props.index), 1);
       console.log(props);
       localStorage.setItem("finished", JSON.stringify(a));
-      props.finishmanage(a);
+      if(props.type!=="Home") props.finishmanage(a);
+      else{console.log("home")}
     }
   }
   return (

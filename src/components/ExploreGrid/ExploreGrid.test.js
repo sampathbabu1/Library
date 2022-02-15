@@ -10,7 +10,7 @@ test("ExploreGrid Test", () => {
       }}
     />
   );
-  const Element = screen.getByText("Entrepreneurship");
+  let Element = screen.getByText("Entrepreneurship");
   fireEvent.click(Element,{button:0});
   fireEvent.click(Element,{button:0});
   Element=screen.getByText("Personal Development");

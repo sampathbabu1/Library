@@ -30,6 +30,12 @@ test("Home Page test", () => {
       </Routes>
     </BrowserRouter>
   );
+  fireEvent.click(screen.getAllByTestId('SearchIcon')[0],{button:0});
+  fireEvent.change(screen.getByPlaceholderText('Search by title or author'),{target:{
+    value:"Erica Keswin"
+  }});
+  expect(screen.getAllByText('Read book').length).toEqual(1);
+
   const Element =screen.getAllByRole('button')
   // fireEvent.click(Element[7],{button:0})
   fireEvent.click(screen.getByText('My Library'),{button:0})

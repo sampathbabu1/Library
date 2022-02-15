@@ -21,6 +21,11 @@ const MockNavBar = () => {
     </BrowserRouter>
   );
 };
+test('Icon test',()=>{
+  render(<MockNavBar />);
+  // fireEvent.click(screen.)
+  fireEvent.click(screen.getAllByRole('button')[0],{button:0});
+})
 test("NavBar Explore Button Test", () => {
   render(<MockNavBar />);
   fireEvent.click(screen.getByText("Explore"), { button: 0 });

@@ -1,10 +1,6 @@
 import FinishedBooks from "./FinishedBooks";
 import CurrentlyReading from "../CurrentlyReading/CurrentlyReading";
-import {
-  fireEvent,
-  render,
-  screen,
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Home from "../Home/Home";
 import { BrowserRouter } from "react-router-dom";
 test("currently reading test", () => {
@@ -20,12 +16,22 @@ test("currently reading test", () => {
       <CurrentlyReading />
     </BrowserRouter>
   );
-//   screen.debug();
-  const len=screen.getAllByText(/Finished/i).length;
-  expect(len).toEqual(1)
-  fireEvent.click(screen.getAllByText(/Finished/i)[0],{button:0});
-  render(<BrowserRouter>
-  <FinishedBooks /></BrowserRouter>);
+  //   screen.debug();
+  const len = screen.getAllByText(/Finished/i).length;
+  expect(len).toEqual(1);
+  fireEvent.click(screen.getAllByText(/Finished/i)[0], { button: 0 });
+  render(
+    <BrowserRouter>
+      <FinishedBooks />
+    </BrowserRouter>
+  );
   expect(screen.getAllByText(/Read Again/i).length).toEqual(1);
-  screen.debug();
+});
+test("Finished Reading button test", () => {
+  render(
+    <BrowserRouter>
+      <FinishedBooks />
+    </BrowserRouter>
+  );
+  fireEvent.click(screen.getByRole("button"), { button: 0 });
 });

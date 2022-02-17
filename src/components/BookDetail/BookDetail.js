@@ -101,6 +101,7 @@ export default function BookDetail(props) {
                   variant="contained"
                   sx={{
                     backgroundColor: "white",
+                    color:'black',
                     border: 1,
                     display: "inline",
                   }}

@@ -21,7 +21,7 @@ export default function Home(props) {
     <SearchContext.Provider value={searchDisplay}>
       <FilterContext.Provider value={filterType}>
         <Nav />
-        <Container sx={{ display: searchDisplay[0] ? "flex" : "none" }}>
+        <Container sx={{ display: searchDisplay[0] ? "block" : "none" ,width:1,marginY:5,marginX:3}}>
           <SearchBar value={search} handleinput={handlefilter}></SearchBar>
         </Container>
         <Container>

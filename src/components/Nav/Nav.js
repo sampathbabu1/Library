@@ -8,28 +8,20 @@ import { ReactComponent as Logo } from "../../Assets/logo.svg";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-// import { SearchContext,FilterContext } from "../Home/Home";
-import { SearchContext,FilterContext } from "./Nav.test";
+import { SearchContext,FilterContext } from "../Home/Home";
+// import { SearchContext,FilterContext } from "./Nav.test";
+// import {SearchContext,FilterContext} from "./Nav.stories";
 export default function Nav(props) {
   let [boolvalue, setBoolvalue] = useState(false);
   let [searchDisplay,setSearchDisplay]=useContext(SearchContext);
   let [filter,setFilter]=useContext(FilterContext);
   let [name, setName] = useState("home");
   let [displaybool, setDisplay] = useState(false);
-  // const handleDisplay = () => {
-  //   setDisplay((prev) => !prev);
-  // };
 
   const handle = () => {
     setBoolvalue((prev) => !prev);
   };
-  // const handlefilter=(value)=>{
-  //   setFilter(value);
-  //   console.log(filter);
-  // }
-  // const handlelibrary = () => {
-  //   setName("library");
-  // };
+  
 
   return (
     <Box m={2}>
@@ -74,10 +66,7 @@ export default function Nav(props) {
           R
         </Avatar>
       </Box>
-      {/* <SearchContext.Provider value={displaybool}> */}
         <ExploreGrid bol={boolvalue} onClick={(value)=>{setFilter(value);}}></ExploreGrid>
-        {/* {name === "library" ? <Lower active="" /> : <Home />} */}
-      {/* </SearchContext.Provider> */}
     </Box>
   );
 }

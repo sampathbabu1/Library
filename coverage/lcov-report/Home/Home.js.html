@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.55% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/9</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -124,7 +124,8 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,18 +135,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,7 +157,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">81x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">90x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,14 +203,14 @@ export default function Home(props) {
   // console.log(db);
   let searchDisplay = useState(false);
   SearchContext = React.createContext(searchDisplay);
-  const handlefilter = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {
-<span class="cstat-no" title="statement not covered" >    setSearch(value.target.value);</span>
+  const handlefilter = (value) =&gt; {
+    setSearch(value.target.value);
   };
   return (
     &lt;SearchContext.Provider value={searchDisplay}&gt;
       &lt;FilterContext.Provider value={filterType}&gt;
         &lt;Nav /&gt;
-        &lt;Container sx={{ display: searchDisplay[0] ? <span class="branch-0 cbranch-no" title="branch not covered" >"flex" </span>: "none" }}&gt;
+        &lt;Container sx={{ display: searchDisplay[0] ? <span class="branch-0 cbranch-no" title="branch not covered" >"block" </span>: "none" ,width:1,marginY:5,marginX:3}}&gt;
           &lt;SearchBar value={search} handleinput={handlefilter}&gt;&lt;/SearchBar&gt;
         &lt;/Container&gt;
         &lt;Container&gt;
@@ -220,7 +222,7 @@ export default function Home(props) {
           &lt;Grid container spacing={2}&gt;
             {db["books"].map((value, index) =&gt;
               (value[index + 1].title.includes(search) ||
-<span class="branch-1 cbranch-no" title="branch not covered" >                value[index + 1].author.includes(search))</span> &amp;&amp;
+                value[index + 1].author.includes(search)) &amp;&amp;
               (value[index + 1].type.includes(filterType[0])) ? (
                 &lt;Grid item xs={4} key={value[index + 1].title}&gt;
                   &lt;BookCard
@@ -231,11 +233,12 @@ export default function Home(props) {
                     author={value[index + 1].author}
                     duration="13-minute read"
                     buttontitle="Read book"
+                    type="Home"
                     url={value[index+1].url}
                   &gt;&lt;/BookCard&gt;
                 &lt;/Grid&gt;
               ) : (
-<span class="branch-1 cbranch-no" title="branch not covered" >                ""</span>
+                ""
               )
             )}
           &lt;/Grid&gt;
@@ -253,7 +256,7 @@ export { SearchContext, FilterContext };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Feb 15 2022 00:00:27 GMT+0530 (India Standard Time)
+                at Wed Feb 23 2022 08:59:43 GMT+0530 (India Standard Time)
             </div>
         <script src="../prettify.js"></script>
         <script>

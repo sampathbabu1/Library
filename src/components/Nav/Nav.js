@@ -8,8 +8,8 @@ import { ReactComponent as Logo } from "../../Assets/logo.svg";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { SearchContext,FilterContext } from "../Home/Home";
-// import { SearchContext,FilterContext } from "./Nav.test";
+// import { SearchContext,FilterContext } from "../Home/Home";
+import { SearchContext,FilterContext } from "./Nav.test";
 // import {SearchContext,FilterContext} from "./Nav.stories";
 export default function Nav(props) {
   let [boolvalue, setBoolvalue] = useState(false);

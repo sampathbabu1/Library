@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+  <file path="/home/sampab/test/src/components/SearchBar/SearchBar.test.js">
+    <testCase name="SearchBar test:" duration="234"/>
+  </file>
   <file path="/home/sampab/test/src/components/ExploreGrid/ExploreGrid.test.js">
-    <testCase name="ExploreGrid Test" duration="735"/>
-  </file>
-  <file path="/home/sampab/test/src/components/Nav/Nav.test.js">
-    <testCase name="Icon test" duration="596"/>
-    <testCase name="NavBar Explore Button Test" duration="279"/>
-    <testCase name="NavBar Search test" duration="563"/>
-  </file>
-  <file path="/home/sampab/test/src/components/Lower/Lower.test.js">
-    <testCase name="Icon test" duration="711"/>
-    <testCase name="NavBar Explore Button Test" duration="257"/>
-    <testCase name="NavBar Search test" duration="599"/>
-    <testCase name="My Library Test" duration="247"/>
-  </file>
-  <file path="/home/sampab/test/src/components/BookDetail/BookDetail.test.js">
-    <testCase name="Icon test" duration="724"/>
-    <testCase name="NavBar Explore Button Test" duration="305"/>
-    <testCase name="NavBar Search test" duration="666"/>
-    <testCase name="BookDetail test" duration="642"/>
-  </file>
-  <file path="/home/sampab/test/src/components/CurrentlyReading/CurrentReading.test.js">
-    <testCase name="Icon test" duration="747"/>
-    <testCase name="NavBar Explore Button Test" duration="325"/>
-    <testCase name="NavBar Search test" duration="632"/>
-    <testCase name="currently reading test" duration="518"/>
-  </file>
-  <file path="/home/sampab/test/src/components/Home/Home.test.js">
-    <testCase name="Icon test" duration="796"/>
-    <testCase name="NavBar Explore Button Test" duration="280"/>
-    <testCase name="NavBar Search test" duration="719"/>
-    <testCase name="Home Page test" duration="914"/>
-  </file>
-  <file path="/home/sampab/test/src/components/FinishedReading/FinishedReading.test.js">
-    <testCase name="Icon test" duration="666"/>
-    <testCase name="NavBar Explore Button Test" duration="339"/>
-    <testCase name="NavBar Search test" duration="485"/>
-    <testCase name="currently reading test" duration="325"/>
-    <testCase name="Finished Reading button test" duration="89"/>
-  </file>
-  <file path="/home/sampab/test/src/components/Footer/Footer.test.js">
-    <testCase name="Footer test" duration="112"/>
+    <testCase name="ExploreGrid Test" duration="607"/>
   </file>
   <file path="/home/sampab/test/src/components/BookCard/BookCard.test.js">
-    <testCase name="BookCard test" duration="117"/>
-    <testCase name="BookCard Functionality Test" duration="25"/>
-    <testCase name="BookCard finished Reading" duration="75"/>
+    <testCase name="BookCard test" duration="279"/>
+    <testCase name="BookCard Functionality Test" duration="63"/>
+    <testCase name="BookCard finished Reading" duration="208"/>
   </file>
-  <file path="/home/sampab/test/src/components/SearchBar/SearchBar.test.js">
-    <testCase name="SearchBar test:" duration="74"/>
+  <file path="/home/sampab/test/src/components/Nav/Nav.test.js">
+    <testCase name="Icon test" duration="621"/>
+    <testCase name="NavBar Explore Button Test" duration="294"/>
+    <testCase name="NavBar Search test" duration="577"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Lower/Lower.test.js">
+    <testCase name="Icon test" duration="622"/>
+    <testCase name="NavBar Explore Button Test" duration="324"/>
+    <testCase name="NavBar Search test" duration="636"/>
+    <testCase name="My Library Test" duration="189"/>
+  </file>
+  <file path="/home/sampab/test/src/components/BookDetail/BookDetail.test.js">
+    <testCase name="Icon test" duration="602"/>
+    <testCase name="NavBar Explore Button Test" duration="336"/>
+    <testCase name="NavBar Search test" duration="593"/>
+    <testCase name="BookDetail test" duration="492"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Home/Home.test.js">
+    <testCase name="Icon test" duration="682"/>
+    <testCase name="NavBar Explore Button Test" duration="314"/>
+    <testCase name="NavBar Search test" duration="569"/>
+    <testCase name="Home Page test" duration="709"/>
+  </file>
+  <file path="/home/sampab/test/src/components/Footer/Footer.test.js">
+    <testCase name="Footer test" duration="116"/>
+  </file>
+  <file path="/home/sampab/test/src/components/CurrentlyReading/CurrentReading.test.js">
+    <testCase name="Icon test" duration="299"/>
+    <testCase name="NavBar Explore Button Test" duration="127"/>
+    <testCase name="NavBar Search test" duration="283"/>
+    <testCase name="currently reading test" duration="193"/>
+  </file>
+  <file path="/home/sampab/test/src/components/FinishedReading/FinishedReading.test.js">
+    <testCase name="Icon test" duration="295"/>
+    <testCase name="NavBar Explore Button Test" duration="120"/>
+    <testCase name="NavBar Search test" duration="296"/>
+    <testCase name="currently reading test" duration="177"/>
+    <testCase name="Finished Reading button test" duration="47"/>
   </file>
 </testExecutions>

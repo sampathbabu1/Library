@@ -24,6 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
+    "sonar-scanner":"node_modules/sonar-scanner/bin/sonar-scanner",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {

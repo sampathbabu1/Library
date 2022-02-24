@@ -36,4 +36,6 @@ test("NavBar Search test", () => {
   expect(
     screen.getByPlaceholderText("Search by title or author")
   ).toBeInTheDocument();
+  fireEvent.click(screen.getByText("Explore"),{button:0});
+  fireEvent.click(screen.getByText("Entrepreneurship"),{button:0});
 });

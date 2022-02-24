@@ -8,15 +8,11 @@ import { ReactComponent as Logo } from "../../Assets/logo.svg";
 import ExploreGrid from "../ExploreGrid/ExploreGrid";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-// import { SearchContext,FilterContext } from "../Home/Home";
-import { SearchContext,FilterContext } from "./Nav.test";
-// import {SearchContext,FilterContext} from "./Nav.stories";
+import { SearchContext,FilterContext } from "../Helper/ContextValues";
 export default function Nav(props) {
   let [boolvalue, setBoolvalue] = useState(false);
   let [searchDisplay,setSearchDisplay]=useContext(SearchContext);
   let [filter,setFilter]=useContext(FilterContext);
-  let [name, setName] = useState("home");
-  let [displaybool, setDisplay] = useState(false);
 
   const handle = () => {
     setBoolvalue((prev) => !prev);
@@ -32,7 +28,7 @@ export default function Nav(props) {
         position="static"
       >
         <Link to="/">
-        <IconButton onClick={() => setName("home")}>
+        <IconButton>
           <Logo />
         </IconButton>
         </Link>

@@ -1,13 +1,11 @@
 import Nav from "./Nav";
-// import {React,useState} from "react";
 import React, { useState } from "react";
+import {SearchContext,FilterContext} from "../Helper/ContextValues";
 export default{
     title:"Nav Bar",
     component:Nav
 };
-let SearchContext;
-let FilterContext;
-export { SearchContext, FilterContext };
+
 const MockNavBar = () => {
     let searchDisplay = useState(false);
     SearchContext = React.createContext(searchDisplay);

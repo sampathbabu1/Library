@@ -4,11 +4,14 @@ import { Box,Tabs,Tab } from "@mui/material";
 import CurrentlyReading from "../CurrentlyReading/CurrentlyReading";
 import FinishedBooks from "../FinishedReading/FinishedBooks";
 import Nav from "../Nav/Nav";
+import {SearchContext,FilterContext} from "../Helper/ContextValues";
 function Lower(props) {
   let [value,setValue]=useState(0);
   const handleChange=(event,newValue)=>{
     setValue(newValue);
   }
+  let searchDisplay="";
+  let filterType="";
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -35,8 +38,10 @@ function Lower(props) {
     };
   }
   return (
+    <SearchContext.Provider value={searchDisplay}>
+      <FilterContext.Provider value={filterType}>
     <Box>
-      {/* <Nav /> */}
+      <Nav />
     <Box marginLeft={3}>
       <Tabs
         value={value}
@@ -54,6 +59,8 @@ function Lower(props) {
         <FinishedBooks />
       </TabPanel>
     </Box>
+    </FilterContext.Provider>
+    </SearchContext.Provider>
   );
 }
 //color={toggle?theme.palette.primary.main:theme.palette.custom.main}

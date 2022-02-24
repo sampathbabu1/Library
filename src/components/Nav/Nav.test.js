@@ -3,14 +3,10 @@ import { BrowserRouter } from "react-router-dom";
 import Nav from "./Nav";
 import React, { useState } from "react";
 import Home from "../Home/Home";
-var SearchContext;
-var FilterContext;
-export { SearchContext, FilterContext };
+import { SearchContext,FilterContext } from "../Helper/ContextValues";
 const MockNavBar = () => {
   let searchDisplay = useState(false);
-  SearchContext = React.createContext(searchDisplay);
   let filterType = useState("");
-  FilterContext = React.createContext(filterType);
   return (
     <BrowserRouter>
       <SearchContext.Provider value={searchDisplay}>
@@ -23,7 +19,6 @@ const MockNavBar = () => {
 };
 test('Icon test',()=>{
   render(<MockNavBar />);
-  // fireEvent.click(screen.)
   fireEvent.click(screen.getAllByRole('button')[0],{button:0});
 })
 test("NavBar Explore Button Test", () => {

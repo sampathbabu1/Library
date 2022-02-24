@@ -5,15 +5,11 @@ import SearchBar from "../SearchBar/SearchBar";
 import React, { useState } from "react";
 import Nav from "../Nav/Nav";
 import {Typography} from "@mui/material";
-let SearchContext;
-let FilterContext;
+import { SearchContext,FilterContext } from "../Helper/ContextValues";
 export default function Home(props) {
   let [search, setSearch] = useState("");
   let filterType = useState("");
-  FilterContext = React.createContext(filterType);
-  // console.log(db);
   let searchDisplay = useState(false);
-  SearchContext = React.createContext(searchDisplay);
   const handlefilter = (value) => {
     setSearch(value.target.value);
   };
